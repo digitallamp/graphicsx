@@ -1,6 +1,7 @@
 
 <html>
 
+		</div><meta charset="UTF-8"><meta charset="UTF-8"><title>Ultimate Graphic Pack Pack</title><meta name='robots' content='max-image-preview:large' /> <script>window._wca = window._wca || [];</script> <link rel='dns-prefetch' href='http://stats.wp.com/' /><link rel='dns-prefetch' href='http://fonts.googleapis.com/' /><link rel='dns-prefetch' href='http://s.w.org/' /><link rel="alternate" type="application/rss+xml" title="GraphicPack.net &raquo; Feed" href="feed" /><link rel="alternate" type="application/rss+xml" title="GraphicPack.net &raquo; Comments Feed" href="comments/feed" /> <script type="text/javascript">window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/graphicPack.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
 <head><meta charset="UTF-8"><meta charset="UTF-8"><title>Ultimate Graphic Pack Pack</title><meta name='robots' content='max-image-preview:large' /> <script>window._wca = window._wca || [];</script> <link rel='dns-prefetch' href='http://stats.wp.com/' /><link rel='dns-prefetch' href='http://fonts.googleapis.com/' /><link rel='dns-prefetch' href='http://s.w.org/' /><link rel="alternate" type="application/rss+xml" title="GraphicPack.net &raquo; Feed" href="feed" /><link rel="alternate" type="application/rss+xml" title="GraphicPack.net &raquo; Comments Feed" href="comments/feed" /> <script type="text/javascript">window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/graphicPack.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
 			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);</script> <style type="text/css">img.wp-smiley,
 img.emoji {
@@ -874,6 +875,200 @@ button:hover{
 					display: none;
 				}
 			}
+			@charset "utf-8";
+/* CSS Document */
+
+
+
+
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+}
+.overlay:target {
+	visibility: visible;
+	opacity: 1;
+}
+.popup {
+	margin: 30px auto;
+	padding: 15px;
+	border-radius: 5px;
+	width: 49%;
+	position: absolute;
+	left: 35%;
+	/* transition: all 5s ease-in-out; */
+}
+.popup h2 {
+	margin-top: 0;
+	color: #333;
+	font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+	position: absolute;
+	top: 35px;
+	left: 25px;
+	background: #00495d;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #fff;
+	padding: 0px 5px;
+}
+.search {
+	position: absolute;
+	top: 19px;
+	left: 45%;
+	/* background: #ce00ff; */
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000;
+	padding: 0px 5px;
+}
+
+.popup .close:hover {
+	color: #ffffff;
+}
+.popup .content {/*	max-height: 30%;
+*/overflow: auto;border-top: 2px dashed #d1d6d8;margin-top: 16px;}
+.div1 {
+	width: 50%;
+	padding: 20px;
+	/* float: left; */
+	height: auto;
+	background:#fff;
+	border-radius: 25px;
+}
+
+
+.content h3 { text-align: center;
+    margin: 15px 0 -1px 0;
+    text-transform: uppercase;
+    color: #00495d;
+}
+@media screen and (max-width: 1024px) {
+.box {
+	width: 70%;
+}
+.popup {
+	width: 70%;
+	left:20%;
+}
+.div1 {
+	width: 70%;
+	padding: 20px;
+	float: left;
+}
+
+}
+
+/* sticky button */	
+	
+#feedback1 {
+    height: 0px;
+    width: 85px;
+    position: fixed;
+    right: 0;
+    top: 30%;
+    z-index: 1000;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+#feedback1 a {
+	display: block;
+	background:url(pc.png) no-repeat;
+	height: 52px;
+	width: 155px;	
+	color: #fff;
+	font-family: Arial, sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+#feedback1 a:hover {
+	background:url(pc-over.png) no-repeat;
+}
+
+#feedback {
+	height: 0px;
+	width: 85px;
+	position: fixed;
+	right: 0;
+	top: 50%;
+	z-index: 1000;
+	transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+#feedback a {
+	display: block;
+	background:#000;
+	height: 52px;
+	padding-top: 10px;
+	width: 155px;
+	text-align: center;
+	color: #fff;
+	font-family: Arial, sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+	text-decoration: none;
+}
+#feedback a:hover {
+	background:#00495d;
+}
+
+/* enquiry form */	
+		
+#quickenquire input[type=text], input[type=email], textarea, select {
+	width: 100%;
+	padding: 5px 15px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+
+#quickenquire label {
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 0px!important;
+	margin: 0px!important;
+}
+#quickenquire  input[type=submit] {
+    width: 100%;
+    background-color: #00495d;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 7px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#quickenquire  input[type=submit]:hover {
+    background-color: #000000;
+}
 		
 			.circle-loading:before,
 			.product_list_widget .remove_from_cart_button:focus:before,
@@ -1039,6 +1234,9 @@ jQuery( 'div.woocommerce' ).on( 'click', 'a.remove', function() {
 	_stq.push([ 'view', {v:'ext',j:'1:10.3',blog:'197137608',post:'13',tz:'5.5',srv:'graphicPack.net'} ]);
 	_stq.push([ 'clickTrackerInit', '197137608', '13' ]);</script> <script type="text/javascript">(function(){window['__CF$cv$params']={r:'6b125d1a1afa0e64',m:'Uy_bmVui0BdM4nY6z.lNWBbtDxUlURGop92nxWB8D50-1637418495-0-AQBsbtVXwSZj43Gc9b8nTlWnLCutQy2pFrqo1F8vmhSsP4OJQdeTx+tFuHpW5g8Mva05qRdHEIOYJdjVhqjEo7ynuY2Q/AhCmhwt0VxJZ5nnT20uizvoJkhCFh+kQZyUbw==',s:[0xb2c247c2d7,0x9f492fd8b6],u:'/cdn-cgi/challenge-platform/h/b'}})();</script>
 <a href="#head"><img src="<img src="https://img.icons8.com/ios-glyphs/90/000000/buy--v1.png"/> id="fixedbutton"></a>
+<div id="feedback">
+			<a href="#popup1">Quick Enquiry</a>
+		</div>
 
 </body>
 
