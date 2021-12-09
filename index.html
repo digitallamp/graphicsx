@@ -1235,9 +1235,42 @@ jQuery( 'div.woocommerce' ).on( 'click', 'a.remove', function() {
 	_stq.push([ 'clickTrackerInit', '197137608', '13' ]);</script> <script type="text/javascript">(function(){window['__CF$cv$params']={r:'6b125d1a1afa0e64',m:'Uy_bmVui0BdM4nY6z.lNWBbtDxUlURGop92nxWB8D50-1637418495-0-AQBsbtVXwSZj43Gc9b8nTlWnLCutQy2pFrqo1F8vmhSsP4OJQdeTx+tFuHpW5g8Mva05qRdHEIOYJdjVhqjEo7ynuY2Q/AhCmhwt0VxJZ5nnT20uizvoJkhCFh+kQZyUbw==',s:[0xb2c247c2d7,0x9f492fd8b6],u:'/cdn-cgi/challenge-platform/h/b'}})();</script>
 <a href="#head"><img src="<img src="https://img.icons8.com/ios-glyphs/90/000000/buy--v1.png"/> id="fixedbutton"></a>
 <div id="feedback">
-			<a href="#popup1">Quick Enquiry</a>
+			<a href="">Buy Now</a>
 		</div>
+<script type="application/javascript" crossorigin="anonymous" src="https://securegw.paytm.in/merchantpgpui/checkoutjs/merchants/jxEmYr09809523478533.js" onload="onScriptLoad();"></script>
+<script>
+    function onScriptLoad(){
+        var config = {
+         "root": "",
+         "flow": "DEFAULT",
+         "data": {
+          "orderId": "" /* update order id */,
+          "token": "" /* update token value */,
+          "tokenType": "TXN_TOKEN",
+          "amount": "99" /* update amount */
+         },
+         "handler": {
+            "notifyMerchant": function(eventName,data){
+              console.log("notifyMerchant handler function called");
+              console.log("eventName => ",eventName);
+              console.log("data => ",data);
+            } 
+          }
+        };
 
+        if(window.Paytm && window.Paytm.CheckoutJS){
+            window.Paytm.CheckoutJS.onLoad(function excecuteAfterCompleteLoad() {
+                // initialze configuration using init method 
+                window.Paytm.CheckoutJS.init(config).then(function onSuccess() {
+                   // after successfully update configuration invoke checkoutjs
+                   window.Paytm.CheckoutJS.invoke();
+                }).catch(function onError(error){
+                    console.log("error => ",error);
+                });
+            });
+        } 
+    }
+</script>
 </body>
 
 </html>
